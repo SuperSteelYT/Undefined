@@ -49,7 +49,7 @@ client.on("message", (message) =>
     const embed = new Discord.RichEmbed()
       .setTitle("Undefined Bot Help")
       .addField("General Commands - Normal, everyday bot commands.", "`ping`, `help`, `information`, `uptime`, `say`, `dm`")
-      .addField("Fun Commands - Warning: Explicit content ahead.", "`8ball`, `dice`, `quotes`, `how`")
+      .addField("Fun Commands - Warning: Explicit content ahead.", "`8ball`, `dice`, `quotes`, `how`, `television`")
       .addField("Developer-Only Commands - Only for developers.", "`activity`, `tts`, `invite`, `shutdown`, `restart`")
       .addField("Bot Prefix", "`*`")
       .setColor(0x9e80e8);
@@ -325,6 +325,12 @@ client.on("message", (message) =>
       .setColor(0x9e80e8);
     message.channel.send({embed});
   }
+
+  // Television - Random old TV commercials
+  if (msg.includes(prefix + "TELEVISION"))
+  {
+    message.channel.send(":tv: Random Commercials: " + commercialList[Math.floor(Math.random() * commercialList.length)]);
+  }
 })
 // Array Lists
 const eightBallResponses = [
@@ -421,4 +427,10 @@ const quotesSuper = [
   'hi jake',
   'arsex'
 ];
+const commercialList = [
+  "https://www.youtube.com/watch?v=XzaZEZrDpQ0",
+  "https://www.youtube.com/watch?v=3ZMaoVhmrD0",
+  "https://www.youtube.com/watch?v=jn4c6wo7I-o",
+  "https://www.youtube.com/watch?v=ihbTepXa2Xc"
+]
 client.login(token);
