@@ -1,0 +1,8 @@
+{
+    "prefix": "*",
+    "token": ":^)",
+    "activity": "television.",
+    "version": "Alpha 0.5",
+    "developerOnlyMessage": ":x: This command is developer-only.",
+    "noPerms": ":x: No permission."
+}
